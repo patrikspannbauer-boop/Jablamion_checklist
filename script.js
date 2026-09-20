@@ -7,8 +7,7 @@ async function loadARES() {
     }
 
     try {
-        // PROXY, která obejde CORS
-        const url = `https://corsproxy.io/?https://ares.gov.cz/ares/api/v2/subjekt/${ico}`;
+        const url = `https://api.allorigins.win/raw?url=https://ares.gov.cz/ares/api/v2/subjekt/${ico}`;
         const response = await fetch(url);
 
         if (!response.ok) {
@@ -32,12 +31,4 @@ async function loadARES() {
     } catch (e) {
         alert("Chyba při komunikaci s ARES.");
     }
-}
-
-function clearForm() {
-    document.getElementById("checklistForm").reset();
-}
-
-function savePDF() {
-    window.print();
 }
