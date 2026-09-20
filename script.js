@@ -7,7 +7,8 @@ async function loadARES() {
     }
 
     try {
-        const url = `https://ares.gov.cz/ares/api/v2/subjekt/${ico}`;
+        // PROXY, která obejde CORS
+        const url = `https://corsproxy.io/?https://ares.gov.cz/ares/api/v2/subjekt/${ico}`;
         const response = await fetch(url);
 
         if (!response.ok) {
