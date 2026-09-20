@@ -1,2 +1,51 @@
-index.html
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktivní checklist – JABLAMION S.R.O.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>JABLAMION S.R.O.</h1>
+    </header>
+
+    <section class="container">
+        <h2>Interaktivní checklist základních dat</h2>
+
+        <div class="buttons">
+            <button onclick="savePDF()">Uložit jako PDF</button>
+            <button onclick="clearForm()">Vymazat formulář</button>
+            <button onclick="loadARES()">Načíst údaje z ARES</button>
+        </div>
+
+        <form id="checklistForm">
+            <div class="section">
+                <h3>1. Identifikace klienta</h3>
+
+                <label>IČ (8 číslic):</label>
+                <input type="text" id="ico" maxlength="8">
+
+                <label>Název subjektu:</label>
+                <input type="text" id="nazev">
+
+                <label>Adresa:</label>
+                <input type="text" id="adresa">
+
+                <label>DIČ:</label>
+                <input type="text" id="dic">
+
+                <label>Právní forma:</label>
+                <input type="text" id="pravniForma">
+
+                <label>E-mail:</label>
+                <input type="email" id="email">
+            </div>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
